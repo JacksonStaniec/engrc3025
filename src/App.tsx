@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "@mantine/core/styles.css";
+import { MantineProvider, createTheme } from "@mantine/core";
+import { ColorSchemeToggle } from "./components/ColorSchemeToggle";
+
+const theme = createTheme({
+  /** Put your mantine theme override here */
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MantineProvider theme={theme} defaultColorScheme="auto">
+      <div className="App">This is my website.</div>
+      <ColorSchemeToggle />
+    </MantineProvider>
   );
 }
 

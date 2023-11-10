@@ -1,7 +1,7 @@
 'use client';
 
 import { Group, ActionIcon, rem, Stack, CopyButton, Notification, Text } from '@mantine/core';
-import { IconBrandYoutube, IconMail } from '@tabler/icons-react';
+import { IconBrandYoutube, IconMail, IconFile } from '@tabler/icons-react';
 import classes from './Socials.module.css';
 
 const links = [
@@ -12,6 +12,10 @@ const links = [
 
 const contactEmail = 'jks273@cornell.edu';
 
+// TODO: download resume butto
+// TODO: about me section
+
+// TODO: change to tooltip https://ui.mantine.dev/category/buttons/
 const Contact = () => (
   <CopyButton value={contactEmail} timeout={1000}>
     {({ copied, copy }) => (
@@ -41,6 +45,26 @@ const Contact = () => (
   </CopyButton>
 );
 
+const Resume = () => (
+  <>
+    <Group gap="xs">
+      <ActionIcon
+        component="a"
+        size="lg"
+        variant="default"
+        radius="xl"
+        className={classes.icon}
+        href="/data/Resume.pdf"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <IconFile stroke={1.5} />
+      </ActionIcon>
+      <Text>Resume</Text>
+    </Group>
+  </>
+);
+
 export const Socials = () => (
   <div className={classes.inner}>
     <Stack gap="xs" mx="xs">
@@ -53,6 +77,7 @@ export const Socials = () => (
             radius="xl"
             className={classes.icon}
             href={link}
+            rel="noopener noreferrer"
             target="_blank"
           >
             {icon}
@@ -60,6 +85,7 @@ export const Socials = () => (
           <Text>{title}</Text>
         </Group>
       ))}
+      <Resume />
       <Contact />
     </Stack>
   </div>

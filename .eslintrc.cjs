@@ -1,10 +1,10 @@
 module.exports = {
-  extends: ['mantine', 'plugin:@next/next/recommended', 'plugin:jest/recommended'],
-  plugins: ['testing-library', 'jest'],
+  extends: ['mantine', 'plugin:@next/next/recommended'],
+  plugins: [],
   overrides: [
     {
       files: ['**/?(*.)+(spec|test).[jt]s?(x)'],
-      extends: ['plugin:testing-library/react'],
+      extends: [],
     },
   ],
   parserOptions: {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IconArrowDown, IconArrowRight } from '@tabler/icons-react';
-import { Center, Container, Grid, Text, Title } from '@mantine/core';
+import { Center, Container, Grid, Text } from '@mantine/core';
 import { Timeline } from '../Timeline/Timeline';
 import classes from './GanntChart.module.css';
 import { TimeAxis } from './TimeAxis';
@@ -19,7 +19,6 @@ export const GanntChart = () => {
   return (
     <>
       <Container m="sm" maw="100%">
-        <Title>Projects</Title>
         {experienceRanges.map(({ title, range }, i) => (
           <Grid className={classes['column-arrangement']}>
             <Grid.Col span={{ base: 12, md: 1 }}>

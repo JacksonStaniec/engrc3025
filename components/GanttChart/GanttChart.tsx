@@ -1,24 +1,24 @@
 import { IconArrowDown, IconArrowRight } from '@tabler/icons-react';
 import { Center, Container, Grid, Stack, Text } from '@mantine/core';
 import { Timeline } from '../Timeline/Timeline';
-import classes from './GanntChart.module.css';
+import classes from './GanttChart.module.css';
 import { TimeAxis } from './TimeAxis';
 
-export type GanntChartElement = { title: string; range: [number, number] };
+export type GanttChartElement = { title: string; range: [number, number] };
 
-type GanntChartProps = {
+type GanttChartProps = {
   accentColor: string;
-  chartElements: GanntChartElement[];
+  chartElements: GanttChartElement[];
   selectedIndex: number;
   selectCallback: (id: number) => void;
 };
 
-export const GanntChart = ({
+export const GanttChart = ({
   accentColor,
   chartElements,
   selectedIndex,
   selectCallback,
-}: GanntChartProps) => (
+}: GanttChartProps) => (
   <>
     <Container h={250} maw="100%">
       <Stack h="100%" justify="space-between">

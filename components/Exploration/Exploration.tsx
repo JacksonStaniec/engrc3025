@@ -1,7 +1,7 @@
 import { Container, Grid, Space, Title } from '@mantine/core';
 import { ReactNode, useState } from 'react';
 import { Experience } from '../Experience/Experience';
-import { GanntChart, type GanntChartElement } from '../GanntChart/GanntChart';
+import { GanttChart, type GanttChartElement } from '../GanttChart/GanttChart';
 
 type ExporationProps = {
   title: string;
@@ -18,12 +18,12 @@ export type ExperienceDescriptor = {
 export const Exploration = ({ title, accentColor, experiences }: ExporationProps) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
-  const chartElements: GanntChartElement[] = experiences.map(
+  const chartElements: GanttChartElement[] = experiences.map(
     (exp) =>
       ({
         title: exp.experienceTitle,
         range: exp.experienceRange,
-      }) as GanntChartElement
+      }) as GanttChartElement
   );
 
   return (
@@ -39,7 +39,7 @@ export const Exploration = ({ title, accentColor, experiences }: ExporationProps
           />
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: 5 }}>
-          <GanntChart
+          <GanttChart
             accentColor={accentColor}
             chartElements={chartElements}
             selectedIndex={selectedIndex}

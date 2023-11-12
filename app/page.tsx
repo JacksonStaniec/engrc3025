@@ -1,5 +1,6 @@
 'use client';
 
+import { Space } from '@mantine/core';
 import { Name } from '../components/Name/Name';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
 import { About } from '@/components/About/About';
@@ -12,7 +13,9 @@ export default function HomePage() {
       <Name />
       <About />
       <Exploration title="Projects" />
+      <Space h="md" />
       <Exploration title="Experiences" />
+      <Space h="sm" />
     </>
   );
 }

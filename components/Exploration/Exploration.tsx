@@ -7,8 +7,8 @@ type ExporationProps = {
 };
 
 export const Exploration = ({ title }: ExporationProps) => (
-  <Container m="xs" maw="100%">
-    <Title>{title}</Title>
+  <Container maw="100%">
+    <Title ml="xs">{title}</Title>
     <Space h="md" />
     <Grid>
       <Grid.Col span={{ base: 12, md: 7 }}>

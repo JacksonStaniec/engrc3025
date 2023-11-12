@@ -1,7 +1,8 @@
 'use client';
 
-import { Group, ActionIcon, rem, Stack, CopyButton, Notification, Text } from '@mantine/core';
+import { Group, ActionIcon, Text, Tooltip, Flex, Center } from '@mantine/core';
 import { IconBrandYoutube, IconMail, IconFile } from '@tabler/icons-react';
+import { useClipboard } from '@mantine/hooks';
 import classes from './Socials.module.css';
 
 const links = [
@@ -12,38 +13,32 @@ const links = [
 
 const contactEmail = 'jks273@cornell.edu';
 
-// TODO: download resume butto
-// TODO: about me section
-
-// TODO: change to tooltip https://ui.mantine.dev/category/buttons/
-const Contact = () => (
-  <CopyButton value={contactEmail} timeout={1000}>
-    {({ copied, copy }) => (
-      <>
-        <Group gap="xs">
-          <ActionIcon
-            onClick={copy}
-            size="lg"
-            variant="default"
-            radius="xl"
-            className={classes.icon}
-          >
-            <IconMail stroke={1.5} />
-          </ActionIcon>
-          <Text>Contact</Text>
-        </Group>
-        {copied && (
-          <Notification
-            withCloseButton={false}
-            title="Email copied!"
-            miw={rem(100)}
-            maw={rem(150)}
-          />
-        )}
-      </>
-    )}
-  </CopyButton>
-);
+const Contact = () => {
+  const clipboard = useClipboard();
+  return (
+    <Group gap="xs">
+      <Tooltip
+        label="Email copied!"
+        offset={5}
+        position="bottom"
+        radius="xl"
+        transitionProps={{ duration: 100, transition: 'slide-down' }}
+        opened={clipboard.copied}
+      >
+        <ActionIcon
+          onClick={() => clipboard.copy(contactEmail)}
+          size="lg"
+          variant="default"
+          radius="xl"
+          className={classes.icon}
+        >
+          <IconMail stroke={1.5} />
+        </ActionIcon>
+      </Tooltip>
+      <Text>Contact</Text>
+    </Group>
+  );
+};
 
 const Resume = () => (
   <>
@@ -67,26 +62,28 @@ const Resume = () => (
 
 export const Socials = () => (
   <div className={classes.inner}>
-    <Stack gap="xs" mx="xs">
-      {links.map(({ title, link, icon }, i) => (
-        <Group gap="xs" key={i}>
-          <ActionIcon
-            component="a"
-            size="lg"
-            variant="default"
-            radius="xl"
-            className={classes.icon}
-            href={link}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            {icon}
-          </ActionIcon>
-          <Text>{title}</Text>
-        </Group>
-      ))}
-      <Resume />
-      <Contact />
-    </Stack>
+    <Center>
+      <Flex direction={{ base: 'row', md: 'column' }} gap="xs" mx="xs">
+        {links.map(({ title, link, icon }, i) => (
+          <Group gap="xs" key={i}>
+            <ActionIcon
+              component="a"
+              size="lg"
+              variant="default"
+              radius="xl"
+              className={classes.icon}
+              href={link}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {icon}
+            </ActionIcon>
+            <Text>{title}</Text>
+          </Group>
+        ))}
+        <Resume />
+        <Contact />
+      </Flex>
+    </Center>
   </div>
 );

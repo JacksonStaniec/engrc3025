@@ -35,6 +35,7 @@ export const Exploration = ({ title, accentColor, experiences }: ExporationProps
           <Experience
             title={experiences[selectedIndex].experienceTitle}
             content={experiences[selectedIndex].experienceContent}
+            accentColor={accentColor}
           />
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: 5 }}>

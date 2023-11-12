@@ -1,0 +1,11 @@
+.markLabel {
+  font-size: large;
+
+  @mixin light {
+    color: var(--mantine-color-black);
+  }
+
+  @mixin dark {
+    color: var(--mantine-color-dark-1);
+  }
+}

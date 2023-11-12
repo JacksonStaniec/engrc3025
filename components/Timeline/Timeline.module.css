@@ -1,0 +1,17 @@
+.bar {
+  height: 200%;
+}
+
+.root {
+  height: 100%;
+}
+
+.track {
+  &::before {
+    opacity: 0;
+  }
+}
+
+.thumb {
+  opacity: 0;
+}

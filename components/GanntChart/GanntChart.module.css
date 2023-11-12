@@ -1,0 +1,27 @@
+.icon-mobile {
+  @media (min-width: 62em) {
+    display: none;
+  }
+}
+
+.icon-desktop {
+  display: none;
+
+  @media (min-width: 62em) {
+    display: block;
+  }
+}
+
+.column-arrangement {
+  @media (min-width: 62em) {
+    flex-direction: row-reverse;
+  }
+}
+
+.time-axis {
+  width: 60%;
+
+  @media (min-width: 62em) {
+    width: 80%;
+  }
+}

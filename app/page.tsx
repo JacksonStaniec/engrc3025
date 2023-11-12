@@ -3,6 +3,7 @@
 import { Name } from '../components/Name/Name';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
 import { About } from '@/components/About/About';
+import { GanntChart } from '@/components/GanntChart/GanntChart';
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <ColorSchemeToggle />
       <Name />
       <About />
+      <GanntChart />
     </>
   );
 }

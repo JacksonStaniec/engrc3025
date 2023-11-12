@@ -1,9 +1,11 @@
-import { RangeSlider } from '@mantine/core';
+import { RangeSlider, useComputedColorScheme } from '@mantine/core';
 import { useState } from 'react';
 import classes from './TimeAxis.module.css';
 
 export const TimeAxis = () => {
   const [value, setValue] = useState<[number, number]>([0, 100]);
+  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
+
   return (
     <RangeSlider
       label={null}
@@ -17,6 +19,9 @@ export const TimeAxis = () => {
       defaultValue={value}
       onChange={() => setValue([0, 100])}
       thumbSize={0}
+      color={
+        computedColorScheme === 'light' ? 'var(--mantine-color-gray-6)' : 'var(--mantine-dark-1)'
+      }
       classNames={{ markLabel: classes.markLabel }}
     />
   );

@@ -3,17 +3,18 @@ import { useState } from 'react';
 import classes from './Timeline.module.css';
 
 type TimeLineProps = {
+  accentColor: string;
   id: number;
   selected: boolean;
   range: [number, number];
   clickCallback: (id: number) => void;
 };
 
-export const Timeline = ({ id, selected, range, clickCallback }: TimeLineProps) => {
+export const Timeline = ({ accentColor, id, selected, range, clickCallback }: TimeLineProps) => {
   const [value, setValue] = useState<[number, number]>(range);
   return (
     <RangeSlider
-      color={selected ? 'red' : 'gray'}
+      color={selected ? accentColor : 'gray'}
       label={null}
       value={value}
       defaultValue={value}

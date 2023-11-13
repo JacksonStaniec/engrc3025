@@ -1,14 +1,21 @@
 'use client';
 
 import { Group, ActionIcon, Text, Tooltip, Flex, Center } from '@mantine/core';
-import { IconBrandYoutube, IconMail, IconFile } from '@tabler/icons-react';
+import { IconMail, IconFile, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
 import { useClipboard } from '@mantine/hooks';
 import classes from './Socials.module.css';
 
 const links = [
-  { title: 'Youtube', link: 'https://www.youtube.com/', icon: <IconBrandYoutube stroke={1.5} /> },
-  { title: 'Youtube', link: 'https://www.youtube.com/', icon: <IconBrandYoutube stroke={1.5} /> },
-  { title: 'Youtube', link: 'https://www.youtube.com/', icon: <IconBrandYoutube stroke={1.5} /> },
+  {
+    title: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/jacksonstaniec',
+    icon: <IconBrandLinkedin stroke={1.5} />,
+  },
+  {
+    title: 'Github',
+    link: 'https://www.github.com/JacksonStaniec',
+    icon: <IconBrandGithub stroke={1.5} />,
+  },
 ];
 
 const contactEmail = 'jks273@cornell.edu';
@@ -63,7 +70,7 @@ const Resume = () => (
 export const Socials = () => (
   <div className={classes.inner}>
     <Center>
-      <Flex direction={{ base: 'row', md: 'column' }} gap="xs" mx="xs">
+      <Flex direction={{ base: 'row' }} gap="xs" mx="xs">
         {links.map(({ title, link, icon }, i) => (
           <Group gap="xs" key={i}>
             <ActionIcon

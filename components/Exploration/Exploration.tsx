@@ -31,7 +31,7 @@ export const Exploration = ({ title, accentColor, experiences }: ExporationProps
       <Title ml="xs">{title}</Title>
       <Space h="md" />
       <Grid>
-        <Grid.Col span={{ base: 12, md: 7 }}>
+        <Grid.Col span={{ base: 10, md: 7 }}>
           <Experience
             title={experiences[selectedIndex].experienceTitle}
             content={experiences[selectedIndex].experienceContent}

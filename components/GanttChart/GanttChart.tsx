@@ -20,7 +20,7 @@ export const GanttChart = ({
   selectCallback,
 }: GanttChartProps) => (
   <>
-    <Container h={250} maw="100%">
+    <Container maw="100%">
       <Stack h="100%" justify="space-between">
         {chartElements.map(({ title, range }, i) => (
           <Grid key={i} className={classes['column-arrangement']}>
@@ -32,7 +32,8 @@ export const GanttChart = ({
                 </div>
               </Center>
             </Grid.Col>
-            <Grid.Col span={{ base: 10, md: 8 }}>
+            <Grid.Col span={{ base: 1, md: 0 }} />
+            <Grid.Col span={{ base: 7, md: 7 }}>
               <Timeline
                 accentColor={accentColor}
                 key={i}
@@ -42,16 +43,15 @@ export const GanttChart = ({
                 clickCallback={selectCallback}
               />
             </Grid.Col>
-            <Grid.Col span={{ base: 2, md: 3 }}>
-              <Center>
-                <Text>{title}</Text>
-              </Center>
+            <Grid.Col span={{ base: 4, md: 3 }}>
+              <Text>{title}</Text>
             </Grid.Col>
           </Grid>
         ))}
         <Grid pb="lg">
           <Grid.Col span={{ base: 12, md: 1 }} />
-          <Grid.Col pb="lg" span={{ base: 10, md: 8 }}>
+          <Grid.Col span={{ base: 1, md: 0 }} />
+          <Grid.Col pb="lg" span={{ base: 9, md: 8 }}>
             <TimeAxis />
           </Grid.Col>
           <Grid.Col span={{ base: 2, md: 3 }} />

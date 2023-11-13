@@ -1,0 +1,9 @@
+.about {
+  margin-left: rem(80px);
+  margin-right: rem(80px);
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    margin-left: rem(10px);
+    margin-right: rem(10px);
+  }
+}

@@ -6,9 +6,14 @@ import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeTo
 import { About } from '@/components/About/About';
 import { Exploration, type ExperienceDescriptor } from '@/components/Exploration/Exploration';
 import { AbInitio, Cogito, Research, TeachingAssistant } from './experiences/Jobs';
-import { DTI } from './experiences/Projects';
+import { Compiler, DTI } from './experiences/Projects';
 
 const projectExperiences: ExperienceDescriptor[] = [
+  {
+    experienceTitle: 'Compiler',
+    experienceRange: [55, 75],
+    experienceContent: <Compiler />,
+  },
   {
     experienceTitle: 'Cornell DTI',
     experienceRange: [10, 60],

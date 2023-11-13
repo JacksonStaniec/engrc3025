@@ -2089,6 +2089,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/code-highlight@npm:^7.2.2":
+  version: 7.2.2
+  resolution: "@mantine/code-highlight@npm:7.2.2"
+  dependencies:
+    clsx: "npm:2.0.0"
+    highlight.js: "npm:^11.7.0"
+  peerDependencies:
+    "@mantine/core": 7.2.2
+    "@mantine/hooks": 7.2.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: ab98547ac1339c4d734976e188e4261909f47576ceb05d70161f1d1220968e8b70c1731185194f2b3465caf430f21b73b38c40a461567baf91dac64a01717a32
+  languageName: node
+  linkType: hard
+
 "@mantine/core@npm:7.2.0":
   version: 7.2.0
   resolution: "@mantine/core@npm:7.2.0"
@@ -8673,6 +8688,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highlight.js@npm:^11.7.0":
+  version: 11.9.0
+  resolution: "highlight.js@npm:11.9.0"
+  checksum: 27cfa8717dc9d200aecbdb383eb122d5f45ce715d2f468583785d36fbfe5076ce033abb02486dc13b407171721cda6f474ed3f3a5a8e8c3d91367fa5f51ee374
+  languageName: node
+  linkType: hard
+
 "hmac-drbg@npm:^1.0.1":
   version: 1.0.1
   resolution: "hmac-drbg@npm:1.0.1"
@@ -9407,6 +9429,7 @@ __metadata:
   resolution: "jackson-staniec-website@workspace:."
   dependencies:
     "@babel/core": "npm:^7.23.2"
+    "@mantine/code-highlight": "npm:^7.2.2"
     "@mantine/core": "npm:7.2.0"
     "@mantine/hooks": "npm:7.2.0"
     "@next/bundle-analyzer": "npm:^14.0.1"

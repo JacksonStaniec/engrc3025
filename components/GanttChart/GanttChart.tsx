@@ -51,7 +51,7 @@ export const GanttChart = ({
         <Grid pb="lg">
           <Grid.Col span={{ base: 12, md: 1 }} />
           <Grid.Col span={{ base: 1, md: 0 }} />
-          <Grid.Col pb="lg" span={{ base: 9, md: 8 }}>
+          <Grid.Col pb="lg" span={{ base: 7, md: 7 }}>
             <TimeAxis />
           </Grid.Col>
           <Grid.Col span={{ base: 2, md: 3 }} />

@@ -1,6 +1,7 @@
 import { Center, Group, Pill, Text, Title, Image, Code } from '@mantine/core';
 import NextImage from 'next/image';
 import VennDiagram from '../../public/data/abinitio.svg';
+import DarkVennDiagram from '../../public/data/abinitiodark.svg';
 import Dashboard1 from '../../public/data/module1.png';
 import Dashboard2 from '../../public/data/module2.png';
 import Telephony from '../../public/data/telephony.png';
@@ -60,6 +61,13 @@ export const AbInitio = () => (
         component={NextImage}
         src={VennDiagram}
         alt="Venn diagram explaining possible tasks that issue synchronizer can execute."
+        darkHidden
+      />
+      <Image
+        component={NextImage}
+        src={DarkVennDiagram}
+        alt="Venn diagram explaining possible tasks that issue synchronizer can execute."
+        lightHidden
       />
     </Center>
     <Text>

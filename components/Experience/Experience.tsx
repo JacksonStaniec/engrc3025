@@ -23,7 +23,7 @@ export const Experience = ({ title, content, accentColor }: ExperienceProps) => 
     >
       <ScrollArea
         h={350}
-        type="hover"
+        type="auto"
         offsetScrollbars
         scrollbarSize={8}
         scrollHideDelay={250}

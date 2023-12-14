@@ -1,6 +1,7 @@
 'use client';
 
 import { Space } from '@mantine/core';
+import { useState } from 'react';
 import { Name } from '../components/Name/Name';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
 import { About } from '@/components/About/About';
@@ -45,6 +46,7 @@ const workExperiences: ExperienceDescriptor[] = [
 ];
 
 export default function HomePage() {
+  const [instructionsVisible, setInstructionsVisible] = useState<boolean>(true);
   return (
     <>
       <ColorSchemeToggle />
@@ -54,12 +56,16 @@ export default function HomePage() {
         accentColor="var(--mantine-color-blue-6)"
         title="Experiences"
         experiences={workExperiences}
+        showInstructions={instructionsVisible}
+        showInstructionsCallback={setInstructionsVisible}
       />
       <Space h="xl" />
       <Exploration
         accentColor="var(--mantine-color-red-6)"
         title="Projects"
         experiences={projectExperiences}
+        showInstructions={instructionsVisible}
+        showInstructionsCallback={setInstructionsVisible}
       />
       <Space h="sm" />
     </>

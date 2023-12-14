@@ -11,35 +11,83 @@ import { Compiler, DTI } from './experiences/Projects';
 
 const projectExperiences: ExperienceDescriptor[] = [
   {
-    experienceTitle: 'Compiler',
-    experienceRange: [55, 75],
+    experienceTitle: 'Semester-Long Compiler Project',
+    experienceThumbnail: (
+      <div>
+        Compiler,{' '}
+        <span>
+          <i>Engineer</i>
+        </span>
+      </div>
+    ),
+    experienceRange: [65, 85],
     experienceContent: <Compiler />,
   },
   {
-    experienceTitle: 'Cornell DTI',
-    experienceRange: [10, 60],
+    experienceTitle: 'Technical Project Manager for Cornell Design and Tech Initiative',
+    experienceThumbnail: (
+      <div>
+        Cornell DTI,{' '}
+        <span>
+          <i>Team Lead</i>
+        </span>
+      </div>
+    ),
+    experienceRange: [10, 85],
     experienceContent: <DTI />,
   },
 ];
 
 const workExperiences: ExperienceDescriptor[] = [
   {
-    experienceTitle: 'Ab Initio',
+    experienceTitle: 'Software Engineer for Ab Initio',
+    experienceThumbnail: (
+      <div>
+        Ab Initio,{' '}
+        <span>
+          <i>Engineer</i>
+        </span>
+      </div>
+    ),
     experienceRange: [75, 90],
     experienceContent: <AbInitio />,
   },
   {
-    experienceTitle: 'Cogito Corp',
+    experienceTitle: 'Telephony Software Engineer for Cogito Corp',
+    experienceThumbnail: (
+      <div>
+        Cogito Corp,{' '}
+        <span>
+          <i>Engineer</i>
+        </span>
+      </div>
+    ),
     experienceRange: [35, 55],
     experienceContent: <Cogito />,
   },
   {
-    experienceTitle: 'CS Research',
+    experienceTitle: 'Research Assistant for Python Module Dependency Analysis',
+    experienceThumbnail: (
+      <div>
+        CS Research,{' '}
+        <span>
+          <i>Assistant</i>
+        </span>
+      </div>
+    ),
     experienceRange: [10, 25],
     experienceContent: <Research />,
   },
   {
-    experienceTitle: 'Course Staff',
+    experienceTitle: 'Autograder Developer for CS 3110 Functional Programming',
+    experienceThumbnail: (
+      <div>
+        Course Staff,{' '}
+        <span>
+          <i>TA</i>
+        </span>
+      </div>
+    ),
     experienceRange: [10, 100],
     experienceContent: <TeachingAssistant />,
   },

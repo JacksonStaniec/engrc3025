@@ -14,6 +14,7 @@ type ExporationProps = {
 
 export type ExperienceDescriptor = {
   experienceTitle: string;
+  experienceThumbnail: ReactNode;
   experienceRange: [number, number];
   experienceContent: ReactNode;
 };
@@ -37,7 +38,7 @@ export const Exploration = ({
   const chartElements: GanttChartElement[] = experiences.map(
     (exp) =>
       ({
-        title: exp.experienceTitle,
+        title: exp.experienceThumbnail,
         range: exp.experienceRange,
       }) as GanttChartElement
   );
@@ -45,7 +46,7 @@ export const Exploration = ({
   return (
     <Container maw="100%">
       <Title ml="xs">{title}</Title>
-      <Grid>
+      <Grid gutter="xs">
         <Grid.Col span={{ base: 10, md: 7 }}>
           <Text
             fs="italic"

@@ -31,8 +31,8 @@ export const AbInitio = () => (
         One of the goals of Ab Initio is to move their product line to the cloud marketplace.
         However, products in that space are expected to be self-managed and self-repairing. One of
         the product offerings of Ab Initio is called the Metadata Hub, which gives tools to business
-        users to easily manage and analyze extremely large quanities of data. Handling this much
-        data can require many system administrators, and confiuring many customizable options to
+        users to easily manage and analyze extremely large quantities of data. Handling this much
+        data can require many system administrators, and configuring many customizable options to
         cater the Metadata Hub to their specific business needs. So, one of the tasks I worked on
         over the summer was creating this automatic issue detection system to be able to notify
         administrators of problems that arise when configuration changes are made to the Metadata
@@ -79,8 +79,8 @@ export const AbInitio = () => (
       </ol>
 
       <Text>
-        This issue synchronizer would run once a day as a background maintanence task, but could
-        also be run manually by adminsitrators.
+        This issue synchronizer would run once a day as a background maintenance task, but could
+        also be run manually by administrators.
       </Text>
     </Spoiler>
     <Title mt="xs" order={4}>
@@ -102,9 +102,9 @@ export const AbInitio = () => (
         </li>
       </ul>
       <Text>
-        I was also able to discuss accessbility concerns from the frontend changes with the UX team,
-        and preempt concerns about localizing the appearance and language used in the issues created
-        by the issue detector with the localization department.
+        I was also able to discuss accessibility concerns from the frontend changes with the UX
+        team, and preempt concerns about localizing the appearance and language used in the issues
+        created by the issue detector with the localization department.
       </Text>
     </Spoiler>
   </>
@@ -166,7 +166,7 @@ export const Cogito = () => (
           />
         </Center>
         Previously, these XML documents were manually created, and thus only had one set rate to
-        place calls. So, in order to faciliate dynamic call rates, I needed to implement:
+        place calls. So, in order to facilitate dynamic call rates, I needed to implement:
       </Text>
       <ol>
         <li>An interface for specifying what rate distribution to follow.</li>
@@ -235,12 +235,12 @@ export const Research = () => (
       </Center>
       <Text>
         To analyze code structure, we traversed the Python abstract syntax trees (ASTs) of a
-        repository and constructed a directed multigraph with edges reprenting a variety of
+        repository and constructed a directed multigraph with edges representing a variety of
         relationships -- like import dependencies, inheritance dependencies, and even functional
         dependencies within modules. We developed a frontend dashboard to allow users to graphically
         explore these relationships. For example, in this Python repository, the central node
         represents a <Code>types</Code> file, which has an extremely high degree of coupling, since
-        every other modules depends on it for its typing defintions.
+        every other modules depends on it for its typing definitions.
       </Text>
     </Spoiler>
     <Title mt="xs" order={4}>

@@ -20,11 +20,10 @@ export const DTI = () => (
     </Title>
     <Spoiler maxHeight={50} showLabel="Read more" hideLabel="Hide">
       <Text>
-        Cornell DTI is a project team that create web applications for commnity use -- like
+        Cornell DTI is a project team that create web applications for community use -- like
         QueueMeIn that professors use to manage office hours. The IDOL (Internal DTI Organization
         Logic) subteam is responsible for creating and maintaining tools for the team leads to more
-        easily manage the ~100 members of the project team. assignemtns for debs is the portfolio.
-        All hands meetings. Team events.
+        easily manage the ~100 members of the project team.
       </Text>
       <Text mt="sm">
         Since project teams are for credit, team members have several assignments to fulfill
@@ -221,7 +220,7 @@ ret
       </Group>
       <Spoiler maxHeight={50} showLabel="Read more" hideLabel="Hide">
         <Text>
-          As part of the project course requirment for CS at Cornell, my group and I completed a
+          As part of the project course requirement for CS at Cornell, my group and I completed a
           semester-long project to build a complete compiler for a new language called Eta.
           Compilation steps included lexing, parsing, typechecking, abstract syntax tree (AST)
           generation, intermediate representation (IR) generation, and assembly instruction
